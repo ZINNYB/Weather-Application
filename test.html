@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=q, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>app</title>
+</head>
+<body>
+    <button onclick="today()"> today</button>
+    <button onclick="forecast()">forecast</button>
+    <button onclick="sunmoon()">sun/moon</button>
+
+    <div class="container" style="height:100vh;width:100%;">
+        <div id="today" style="height:100vh;width:100%;">
+            something here
+        </div>
+        <div id="forecast"style="display:none;height:100vh;width:100%;background:blue;">
+            something else here
+        </div>
+        <div id="sunmoon" style="display:none;height:100vh;width:100%;background:red;">
+            also something here
+        </div>
+    </div>
+    <script>
+    function today(){
+        document.getElementById('today').style.display = "";
+        document.getElementById('forecast').style.display = "none";
+        document.getElementById('sunmoon').style.display = "none";
+    }
+    function forecast(){
+        document.getElementById('today').style.display = "none";
+        document.getElementById('forecast').style.display = "";
+        document.getElementById('sunmoon').style.display = "none";
+    }    
+    function sunmoon(){
+        document.getElementById('today').style.display = "none";
+        document.getElementById('forecast').style.display = "none";
+        document.getElementById('sunmoon').style.display = "";
+    }
+    </script>
+</body>
+</html>

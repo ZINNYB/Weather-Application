@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title> weather application</title>
+   
+    <title>weather APP</title>
+
+    <!-- descriptive metas-->
+
+    <meta name="description" content="Weather Application " >
+    <meta name="keyword" content ="Weather Application, Weather">
+    <meta name="author" content="ezinne kanu">
+
+    <!--style links-->
+    <link rel="stylesheet" href="assets/PT_Serif/PT_Serif-Web-Regular.ttf">
+    <link rel="stylesheet" href="CSS/APP.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+
+    </head>
+
+<body>
+
+    <!--Navigation bar structure-->
+    <nav>
+        <div  id="first-layer-nav-items" class="flex-container" >
+           <div> 
+                <button id="open-menu-btn" class="ripple">
+                        <img class="icon-sm-28" src="./assets/images/icons/menu.png" alt="">
+                    </button>
+     
+             </div> 
+            <header> 
+                <h1 class="location-label">location</h1>
+                <p  id="time-label" > 6:35</p>
+            </header>
+            <div>
+                    <h1 class="frozen" contenteditable data-heading="Frozen">
+                            REAL <br>  WEATHER
+                        </h1>
+            </div>
+            <div>
+                <img  src="assets/images/icons/icons8-share-24 (1).png" alt="share-icon">
+            </div> 
+           
+
+        </div>
+    <div id="second-layer-nav-items" class="flex-container">
+        <div>
+            TODAY
+        </div>
+               
+        <div>FORECAST
+
+        </div>
+        <div> SUN\MOON
+
+        </div>
+                  
+    </div>
+    </nav>
+    
+        <div id="app-loader" class="lds-dual-ring center" ></div>
+
+         <main hidden>
+               
+ <!--current day weather view section-->
+
+      <section id="current-day-weather-container">
+
+           
+
+            <div class = "flex-container" id="temperature-summary-container">
+                    <div id="clear-day-icon">
+                        <img src="assets/images/summary-icons/clear-day-white.png" alt="weather sunlight icon" id="currentlyIcon">
+                   </div>
+                    <div >
+                        
+                         <p id ="degrees-label"></p>  
+                        <h1 id ="summary-label"></h1>
+                    </div>
+             </div> 
+             <div id="weather-condition-attributes" class="flex-container" >
+                <div>
+                        <ul>
+                                <li>Uv index</li>
+                                <li id="UV-label">...</li>
+                               
+                         </ul>
+                     
+                </div>
+               <span><hr></span> 
+                <div>
+                        <ul>
+                                <li >humidity</li>
+                                <li id="humidity-label">...</li>
+                                
+                            </ul>
+                </div>
+               <span><hr></span> 
+                <div>
+                        <ul>
+                                <li>pressure</li>
+                                <li id="pressure-label">...</li>
+                                
+                        </ul>
+                </div>
+
+               
+             </div>
+        </section>
+        <section id="lower-panel" >
+
+            <button id="sections-navigation-icon" class="ripple centerX ">
+                
+                <img src="assets/images/icons/up-arrow.png" alt="scroll through icon">
+            </button>
+
+            <!--hourly weather forecast-->
+
+        
+            <div id="current-hourly-forecast" class="lower-panel-area" > 
+
+               <div id="unit-hour-forecast" class="flex-container current-hour-forecast display-none">
+
+                    <div> 
+                        <h1>4pm</h1> 
+                    </div>
+
+                    <div class="flex-container">
+                        <div>
+                            <p>18&deg</p> 
+                        </div>  
+                        
+                    <div>
+
+                        <img class="icon-sm-30" src="./assets/images/summary-icons/clear-day-white.png" alt="">
+                    </div>
+                </div> 
+            </div>
+            </div>
+
+            <!--daily weather forecast-->
+
+            <div  id="daily-forecast-case" visible = "false" class="lower-panel-area">
+
+                    <div id="unit-day-forecast" class="flex-container current-day-forecast display-none">
+                         <div> 
+                             <h1>Sunday</h1> 
+                            </div>
+                         <div class="flex-container">
+                           <div>
+                                <p>18&deg</p> 
+                           </div>  
+                             
+                         <div>
+     
+                            <img class="icon-sm-30" src="./assets/images/summary-icons/clear-day-grey.png" alt="">
+                        </div>
+                     </div> 
+                 </div>
+             </div>
+      
+                 
+        </section>
+        
+        
+         
+         <!-- menu container -->
+        <section id="menu-container">
+                <button id="close-menu-btn" class="ripple">
+                    &#10006;
+                </button>
+    
+                <!-- container -->
+                <div>
+    
+                    <!-- add location -->
+                    <div id="add-location-wrapper">
+                        <input type="text" placeholder="Location" id="location-input">
+                        <br>
+                        <button class="ripple disabled" id="add-city-btn" disabled>Add City</button>
+                        <h1 class="location-label"></h1>
+                    </div>
+    
+                    <!-- saved cities -->
+                    <div id="saved-cities-wrapper">
+                        <div class="flex-container saved-city-box">
+                            <div class="ripple">
+                                <h1 class="location-label"></h1>
+                            </div>
+                            <div>
+                                <button class="ripple remove-saved-city">-</button>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+          
+		    
+    </main>
+
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+ 
+ <script src="JS/APP.js"></script>
+</body>
+</html> 

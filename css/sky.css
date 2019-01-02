@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../assets/images/bg-images/OAH_060_aspect16x9.jpg);
+    font-family: Poppins-Regular;
+}
+nav{
+    background-color:maroon;
+     text-align: center;
+     height: 30px;
+
+}
+.navbar-light a{
+    color: tan;
+}
+
+.panel {
+    text-align:center;
+     background-color:#C5B358; 
+     color:maroon; 
+     font-size: 16px;
+     } 
+
+/* general used styles*/
+
+.container{
+    background-color:  rgb(73, 65, 19);
+    color: mediumblue;
+    height: 200px;
+    width: 40%;
+    text-align: center;
+    background: transparent;
+   }
+    
+img{
+    width: 80%;
+    height: 50%;
+
+}
+section{
+    width: 100%;
+    background-color: limegreen;
+    height: 40%;
+    background: transparent;
+}
+main{
+    position: relative;
+    top: 50px;
+}
+
+
+/* sunrise and set section */
+
+
+sun-case{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    
+}
+#sunrise-case{
+    margin-left: 5px;
+
+}
+#sunset-case{
+  position:absolute;
+ right:5px;
+ top: 7px;
+
+}
