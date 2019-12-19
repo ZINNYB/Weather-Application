@@ -26,15 +26,13 @@
     </head>
 
 <body>
-
     <!--Navigation bar structure-->
     <nav>
         <div  id="first-layer-nav-items" class="flex-container" >
            <div> 
                 <button id="open-menu-btn" class="ripple">
                         <img class="icon-sm-28" src="./assets/images/icons/menu.png" alt="">
-                    </button>
-     
+                </button>
              </div> 
             <header> 
                 <h1 class="location-label">location</h1>
@@ -42,47 +40,37 @@
             </header>
             <div>
                     <h1 class="frozen" contenteditable data-heading="Frozen">
-                            REAL <br>  WEATHER
-                        </h1>
+                         REAL <br>  WEATHER
+                    </h1>
             </div>
             <div>
                 <img  src="assets/images/icons/icons8-share-24 (1).png" alt="share-icon">
             </div> 
-           
-
         </div>
     <div id="second-layer-nav-items" class="flex-container">
         <div>
             TODAY
-        </div>
-               
+        </div>      
         <div>FORECAST
-
         </div>
         <div> SUN\MOON
-
-        </div>
-                  
+        </div>          
     </div>
-    </nav>
-    
+	</nav>
         <div id="app-loader" class="lds-dual-ring center" ></div>
 
          <main hidden>
                
  <!--current day weather view section-->
 
-      <section id="current-day-weather-container">
-
-           
+      <section id="current-day-weather-container"> 
 
             <div class = "flex-container" id="temperature-summary-container">
                     <div id="clear-day-icon">
                         <img src="assets/images/summary-icons/clear-day-white.png" alt="weather sunlight icon" id="currentlyIcon">
                    </div>
-                    <div >
-                        
-                         <p id ="degrees-label"></p>  
+                    <div >      
+                        <p id ="degrees-label"></p>  
                         <h1 id ="summary-label"></h1>
                     </div>
              </div> 
@@ -92,16 +80,15 @@
                                 <li>Uv index</li>
                                 <li id="UV-label">...</li>
                                
-                         </ul>
-                     
+                         </ul>  
                 </div>
                <span><hr></span> 
                 <div>
-                        <ul>
-                                <li >humidity</li>
-                                <li id="humidity-label">...</li>
+                      <ul>
+                         <li >humidity</li>
+                        <li id="humidity-label">...</li>
                                 
-                            </ul>
+                     </ul>
                 </div>
                <span><hr></span> 
                 <div>
@@ -123,7 +110,6 @@
             </button>
 
             <!--hourly weather forecast-->
-
         
             <div id="current-hourly-forecast" class="lower-panel-area" > 
 
@@ -168,10 +154,7 @@
              </div>
       
                  
-        </section>
-        
-        
-         
+        </section>    
          <!-- menu container -->
         <section id="menu-container">
                 <button id="close-menu-btn" class="ripple">
@@ -180,7 +163,6 @@
     
                 <!-- container -->
                 <div>
-    
                     <!-- add location -->
                     <div id="add-location-wrapper">
                         <input type="text" placeholder="Location" id="location-input">
@@ -188,7 +170,6 @@
                         <button class="ripple disabled" id="add-city-btn" disabled>Add City</button>
                         <h1 class="location-label"></h1>
                     </div>
-    
                     <!-- saved cities -->
                     <div id="saved-cities-wrapper">
                         <div class="flex-container saved-city-box">
@@ -198,19 +179,13 @@
                             <div>
                                 <button class="ripple remove-saved-city">-</button>
                             </div>
-    
                         </div>
                     </div>
                 </div>
                 </div>
-            </section>
-          
-		    
+            </section>	    
     </main>
-
-    
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
- 
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
  <script src="JS/APP.js"></script>
 </body>
 </html> 
